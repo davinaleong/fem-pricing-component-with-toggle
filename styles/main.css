@@ -144,10 +144,6 @@ body {
   place-items: center;
 }
 
-.body-base {
-  position: relative;
-}
-
 @media screen and (min-width: 45.625em) {
   .body-grid {
     padding-block: var(--size-v-600);
@@ -212,14 +208,6 @@ b {
   margin-inline: auto;
 }
 
-.container-base {
-  --container-padding: var(--size-f-600);
-
-  padding-block: var(--size-f-400);
-  text-align: center;
-  min-height: calc(100vh - var(--header-height) - var(--hero-image-height));
-}
-
 a {
   --clr-link: var(--clr-neutral-500);
   --clr-hover-link: var(--clr-secondary-400);
@@ -232,21 +220,6 @@ a {
 
 a:where(:hover, :focus, :focus-visible) {
   color: var(--clr-hover-link);
-}
-
-.link-user {
-  --clr-link: var(--clr-neutral-600);
-  --clr-hover-link: var(--clr-secondary-400);
-}
-
-.link-notification {
-  --clr-link: var(--clr-neutral-500);
-  --clr-hover-link: var(--clr-secondary-400);
-}
-
-.link-group {
-  --clr-link: var(--clr-secondary-400);
-  --clr-hover-link: var(--clr-secondary-400);
 }
 
 .attribution {
@@ -330,46 +303,30 @@ a:where(:hover, :focus, :focus-visible) {
   --btn-padding: 0;
 }
 
-.btn-form {
-  --btn-clr: var(--clr-neutral-500);
-  --btn-bg-clr: transparent;
-  --btn-bg-img: var(--clr-primary-gradient-400);
-  --btn-border-clr: transparent;
-
-  --btn-hover-clr: var(--clr-secondary-400);
-  --btn-hover-bg-clr: transparent;
-  --btn-hover-bg-img: var(--clr-primary-gradient-300);
-  --btn-hover-border-clr: transparent;
-
+/** Content - Layout **/
+.image-top {
   position: absolute;
   top: 0;
-  right: 0;
+  right: -50%;
+}
+
+.image-bottom {
+  position: absolute;
+  left: 0;
   bottom: 0;
-  min-width: 5em;
-  border-radius: 100vmax;
+  display: none;
 }
 
-.btn-form:hover {
-  box-shadow: 0.3em 0.5em 1em 0 hsl(0, 36%, 75%);
-}
-
-@media (min-width: 64.063em) {
-  .body-base {
-    display: flex;
-    min-height: 100vh;
+@media (min-width: 62em) {
+  .image-top {
+    right: 0;
   }
-
-  .container-base {
-    display: flex;
-    flex-direction: column;
-    gap: var(--size-v-400);
-    justify-content: center;
-    text-align: left;
-    min-height: 100%;
+  
+  .image-bottom {
+    display: block;
   }
 }
 
-/** Content - Layout **/
 /** Content - End **/
 
 /** Utility **/
