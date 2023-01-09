@@ -1,4 +1,4 @@
-# Base Apparel Coming Soon Page
+# Pricing Component with Toggle
 
 Another simple challenge from Frontend Mentor.
 
