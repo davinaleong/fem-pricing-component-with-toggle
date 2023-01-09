@@ -21,6 +21,9 @@
 
 /** Root **/
 :root {
+  --clr-primary-300: hsl(236, 72%, 79%);
+  --clr-primary-400: hsl(237, 63%, 64%);
+
   --clr-primary-gradient-400: linear-gradient(0deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
   
   --clr-link-400: hsl(228, 45%, 44%);
@@ -304,6 +307,22 @@ a:where(:hover, :focus, :focus-visible) {
   --btn-padding: 0;
 }
 
+.btn-primary {
+  --btn-clr: var(--clr-neutral-50);
+  --btn-bg-clr: transparent;
+  --btn-bg-img: var(--clr-primary-gradient-400);
+  --btn-border-clr: transparent;
+
+  --btn-hover-clr: var(--clr-primary-400);
+  --btn-hover-bg-clr: var(--clr-neutral-50);
+  --btn-hover-bg-img: none;
+  --btn-hover-border-clr: var(--clr-primary-400);
+
+  font-size: var(--fz-200);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
 /** Content - Layout **/
 .image-top {
   position: absolute;
@@ -367,6 +386,12 @@ input[name="monthly"]:checked + label + .pricing-toggle__control:before {
   right: var(--pricing-toggle-control-padding);
 }
 
+.cards {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, 1fr);
+}
+
 @media (min-width: 62em) {
   .image-top {
     right: 0;
@@ -397,6 +422,13 @@ input[name="monthly"]:checked + label + .pricing-toggle__control:before {
 }
 
 /** Utility - Colours **/
+.text-primary-300 {
+  color: var(--clr-primary-300);
+}
+.text-primary-400 {
+  color: var(--clr-link-400);
+}
+
 .text-link-400 {
   color: var(--clr-link-400);
 }
@@ -452,6 +484,13 @@ input[name="monthly"]:checked + label + .pricing-toggle__control:before {
 }
 
 /** Utility - Background Colours **/
+.bg-primary-300 {
+  background-color: var(--clr-primary-300);
+}
+.bg-primary-400 {
+  background-color: var(--clr-link-400);
+}
+
 .bg-primary-gradient-400 {
   background-image: var(--clr-primary-gradient-400);
 }
