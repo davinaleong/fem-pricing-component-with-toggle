@@ -18,7 +18,18 @@
     <img src="./images/bg-top.svg" alt="" class="image-top">
     <img src="./images/bg-bottom.svg" alt="" class="image-bottom">
 
-    <main class="container"></main>
+    <main class="container | p-v-y-400">
+      <h1 class="text-neutral-300 fz-600 m-v-b-400">Our Pricing</h1>
+
+      <form action="#" data-element="pricing-form">
+        <div class="pricing-toggle | p-v-y-400">
+          <input type="checkbox" name="monthly" id="monthly" value="monthly" class="visually-hidden">
+          <label for="monthly" class="pricing-toggle__label">Annually</label>
+          <label for="monthly" class="pricing-toggle__control">&nbsp;</label>
+          <label for="monthly" class="pricing-toggle__label">Monthly</label>
+        </div>
+      </form>
+    </main>
 
     <footer class="attribution">
       <div class="container | p-v-y-400">
